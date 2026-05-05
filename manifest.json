@@ -1,0 +1,50 @@
+{
+  "name": "AutoAssist — Asistentul tău auto",
+  "short_name": "AutoAssist",
+  "description": "Platforma digitală de management auto din România",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#c8960c",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["automotive", "utilities", "productivity"],
+  "lang": "ro",
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "Garajul meu",
+      "url": "/?section=garaj",
+      "description": "Accesează garajul tău auto"
+    },
+    {
+      "name": "Asigurări RCA",
+      "url": "/?section=asigurari",
+      "description": "Compară oferte RCA"
+    },
+    {
+      "name": "Asistență rutieră",
+      "url": "/?section=asistenta",
+      "description": "Solicită asistență urgentă"
+    }
+  ]
+}
