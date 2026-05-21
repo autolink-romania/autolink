@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoAssist — Lansare în curând</title>
+  <meta name="description" content="AutoAssist — Prima platformă digitală auto din România. Lansare în curând.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      background: #0a0a0f;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+    }
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 20% 50%, rgba(79,125,255,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(0,232,154,0.08) 0%, transparent 50%);
+      z-index: 0;
+    }
+    .content { position: relative; z-index: 1; max-width: 560px; width: 100%; }
+    .logo-wrap { margin-bottom: 8px; }
+    .logo-wrap img { width: 100%; max-width: 320px; height: auto; }
+    .badge {
+      display: inline-block;
+      background: rgba(0,232,154,0.12);
+      border: 1px solid rgba(0,232,154,0.3);
+      color: #00e89a;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: clamp(24px, 5vw, 42px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    h1 span {
+      background: linear-gradient(135deg, #4f7dff, #00e89a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .feature {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 6px 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+    .notify-form {
+      display: flex;
+      gap: 8px;
+      max-width: 400px;
+      margin: 0 auto 12px;
+    }
+    .notify-form input {
+      flex: 1;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 11px 14px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+    }
+    .notify-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .notify-form button {
+      background: linear-gradient(135deg, #4f7dff, #00e89a);
+      border: none;
+      border-radius: 12px;
+      padding: 11px 18px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .contact { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .contact a { color: rgba(79,125,255,0.8); text-decoration: none; }
+    .dots { display: flex; gap: 6px; justify-content: center; margin-bottom: 14px; }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    .dot:nth-child(2) { animation-delay: 0.3s; background: rgba(79,125,255,0.4); }
+    .dot:nth-child(3) { animation-delay: 0.6s; background: rgba(0,232,154,0.4); }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.3); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="content">
+    <div class="logo-wrap">
+      <img src="logo2.png" alt="AutoAssist" onerror="this.style.display='none'">
+    </div>
+    <div class="badge">🚀 Lansare în curând</div>
+    <h1>Asistentul tău auto,<br><span>mereu disponibil</span></h1>
+    <p>Prima platformă digitală din România care combină managementul complet al mașinii cu inteligență artificială. ITP, RCA, Rovinietă — toate într-un singur loc.</p>
+    <div class="features">
+      <div class="feature">🛡️ Verificare RCA</div>
+      <div class="feature">🔬 Verificare ITP</div>
+      <div class="feature">🛣️ Rovinietă</div>
+      <div class="feature">🤖 Agenți AI</div>
+      <div class="feature">🚗 Garaj virtual</div>
+      <div class="feature">📄 Documente auto</div>
+    </div>
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="notify-form">
+      <input type="email" placeholder="Email-ul tău" id="email-input">
+      <button onclick="notify()">Notifică-mă</button>
+    </div>
+    <div class="contact">
+      Întrebări? <a href="mailto:autoassist.romania@gmail.com">autoassist.romania@gmail.com</a>
+    </div>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('preview') === 'cata2026') {
+      document.cookie = 'aa_preview=cata2026; max-age=604800; path=/';
+      window.location.href = '/app.html';
+    }
+    function notify() {
+      const email = document.getElementById('email-input').value;
+      if (!email || !email.includes('@')) return;
+      document.querySelector('.notify-form').innerHTML = 
+        '<div style="color:#00e89a;font-weight:600;font-size:15px">✅ Te vom notifica la lansare!</div>';
+    }
+  </script>
+</body>
+</html>
